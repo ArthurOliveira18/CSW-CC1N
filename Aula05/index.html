@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferramentas TI utilizadas na biblioteca Ana Bove</title>
+</head>
+
+<body>
+    <h1>4 Sobre a biblioteca Ana Bove e sua instituição mantenedora</h1>
+    <br>
+    <h2>4.1 O Imip</h2>
+    <br>
+    <h3>4.1.2 A biblioteca</h3>
+    <br>
+    <h4>4.2 Diagnóstico</h4>
+
+    <address>Rua são paulo</address>
+    <br>
+    <br>
+    <br>
+
+    <h1>Principais formatações</h1>
+    <br>
+    <h2>Negrito / Destaque</h2>
+    <br>
+    <p>Na frase temos uma <b>parte do texto em negrito</b> usando a tag B (não semântica)</p>
+    <br>
+    <p>
+    <p>Na frase temos uma <b>parte do texto em negrito</b> usando a tag Strong (com semântica)</p>
+    </p>
+    <br>
+    <h2>Itálico / Enfâse</h2>
+    <br>
+    <p>Nesta frase vamos entrar com uma palavra em <i>itálico</i> usando a tag i(não semântica)</p>
+    <br>
+    <p>Nesta frase vamos entrar com uma palavra em <EM>itálico</EM> usando a tag EM(não semântica)</p>
+    <br>
+    <h2>Texto marcado</h2>
+    <br>
+    <p>Aqui vamos usar um texto com destaque <mark style="background-color: green;">de marcador de texto</mark> usando mark</p>
+    <p>Aqui vamos usar um texto com destaque <mark style="background-color: yellow;">de marcador de texto</mark> usando mark</p>
+    <br>
+    <h2>Texto grande e pequeno</h2>
+    <br>
+    <p>Estamos trabalhando aqui com um <big>Texto grande</big> e um <small>texto pequeno</small> nesta frase </p>
+    <br>
+    <h2>texto deletado</h2>
+    <br>
+    <p>Neste paragrafo vamos trabalhar com texto  <del>que foi excluida </del> da frase (forma Semantica)</p>
+    <br>
+    <h2>Texto inserido</h2>
+    <br>
+    <p>Nesta frase vamos demonstrar como <u>destacar um texto inserido</u> na frase de forma semantica</p>
+    <p>Nesta frase vamos demonstrar como <u>destacar um texto inserido</u> na frase de forma não semantica</p>
+    <br>
+    <h2>Texto sobrescrito </h2>
+    <br>
+    <p>Vamos demonstrar uma forma de equeção de segundo grau ax <sup>2</sup>+bx+c=0  usando a tag sup</p>
+    <br>
+    <h2>Texto subescrito</h2>
+    <br>
+    <p>Vamos demonstrar o texto subescrito com a formula da agua H <sub>2</sub>O</p>
+    <br>
+    <h2>Trecho de código fonte</h2>
+    <br>
+    <p>Aqui vou demonstrar um trecho de código</p>
+    <br>
+    <pre>
+        <code>
+            #include <stdio.h>
+                #include <stdlib.h>
+                #include <dirent.h>
+                #include <sys/stat.h>
+                #include <string.h>
+                
+                #define LIMITE_TAMANHO 100000000  // 100 MB (defina o tamanho limite em bytes)
+                
+                void excluir_arquivos_pesados(const char *diretorio) {
+                    struct dirent *entrada;
+                    struct stat info_arquivo;
+                    char caminho_completo[1024];
+                
+                    DIR *dir = opendir(diretorio);
+                    if (dir == NULL) {
+                        perror("Erro ao abrir o diretório");
+                        return;
+                    }
+                
+                    while ((entrada = readdir(dir)) != NULL) {
+                        snprintf(caminho_completo, sizeof(caminho_completo), "%s/%s", diretorio, entrada->d_name);
+                
+                        if (stat(caminho_completo, &info_arquivo) == 0) {
+                            if (S_ISREG(info_arquivo.st_mode) && info_arquivo.st_size > LIMITE_TAMANHO) {
+                                printf("Excluindo: %s (%.2f MB)\n", caminho_completo, info_arquivo.st_size / (1024.0 * 1024.0));
+                                if (remove(caminho_completo) == 0) {
+                                    printf("Arquivo removido com sucesso!\n");
+                                } else {
+                                    perror("Erro ao excluir arquivo");
+                                }
+                            }
+                        } else {
+                            perror("Erro ao obter informações do arquivo");
+                        }
+                    }
+                
+                    closedir(dir);
+                }
+                
+                int main() {
+                    char diretorio[256];
+                
+                    printf("Digite o diretório para verificar e excluir arquivos pesados: ");
+                    scanf("%255s", diretorio);
+                
+                    excluir_arquivos_pesados(diretorio);
+                
+                    return 0;
+                }
+                
+        </code>
+    </pre>
+
+</body>
+
+</html>
