@@ -15,12 +15,31 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 50vw;
     height: 40vh;
     background-color: rgba(255, 255, 255, 0.178);
     background: radial-gradient(circle, red 0%, rgba(255, 255, 255, 0.575) 70% );
+    max-width: 600px;
+    width: 60%;
+
 }
+
+
+
+
+
 h1{
-    font-family: "sedan" , "sans-serif";
+    font-family: "Sedan", serif;
+    font-weight: 400;
+    font-style: normal;
 }
+
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+p{
+    font-family: "Lora", serif;
+}
+
+
 
