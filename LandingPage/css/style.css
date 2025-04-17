@@ -5,6 +5,14 @@
     
 }
 
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
 header {
 
     display: flex;
@@ -29,6 +37,31 @@ header {
     justify-content: center;
     gap: 1rem;
     list-style: none;
+    
+}
+
+.ulPages ul li {
+    position: relative;
+}
+
+.ulPages ul li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;/* Aqui é onde começa a listra do lado de cima que é na posição zero, se fosse "top", ele iniciaria do lado de cima */
+
+    left: 0; /* Aqui é onde começa a listra do lado esquerdo que é na posição zero, se fosse "right", ele iniciaria do lado direito */
+
+    width: 0; /* Aqui é onde começa a listra, no caso na posição zero */
+
+    height: 2px; /* Altura da listra */
+
+    background-color: #000; /* Cor da listra */
+    
+    transition: width 0.3s ease; /* Animação suave */
+}
+
+.ulPages ul li:hover::after {
+    width: 100%; /* Listra se expande para a largura total */
 }
 
 .iconBG img {
@@ -40,4 +73,9 @@ main{
     display: flex;
     justify-content: center;
     
+}
+
+a{
+    text-decoration: none;
+    color: #000;
 }
