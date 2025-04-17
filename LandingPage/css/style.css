@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    
+}
+
+header {
+
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    align-items: center;
+    background-color: #cad3db;
+
+
+}
+
+.myImg img {
+    margin-top: 1rem;
+    border-radius: 8rem;
+    height: 7rem;
+    width: 7rem;
+    margin-bottom: 1rem;
+}
+
+.ulPages ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+}
+
+.iconBG img {
+    width: 3rem;
+}
+
+main{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    
+}
