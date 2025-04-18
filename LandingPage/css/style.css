@@ -11,6 +11,7 @@ body{
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+    background-color: #f5f7fa;
 }
 
 header {
@@ -37,7 +38,7 @@ header {
     justify-content: center;
     gap: 1rem;
     list-style: none;
-    
+    font-size: 20px;
 }
 
 .ulPages ul li {
@@ -69,13 +70,44 @@ header {
 }
 
 main{
-    width: 100vw;
+    max-width: 1000px;
+    width: 80%;
+    min-width: 350px;
+    padding: 2rem;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.37);
+    margin-bottom: 2rem;
     
+}
+
+.sobreMimP{
+    width: 100%;
+    text-align: center;
 }
 
 a{
     text-decoration: none;
     color: #000;
 }
+.dark-mode {
+    background-color: #1E1E1E;
+    color: #fff;
+}
+
+.dark-mode header{
+    background-color: #333;
+}
+
+.dark-mode main{
+    background-color: #333;
+}
+
+.dark-mode a{
+    color: #f5f7fa;
+}
+
