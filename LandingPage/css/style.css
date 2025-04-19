@@ -2,10 +2,10 @@
     margin: 0;
     padding: 0;
     font-family: "Open Sans", sans-serif;
-    
+
 }
 
-body{
+body {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -48,28 +48,35 @@ header {
 .ulPages ul li::after {
     content: '';
     position: absolute;
-    bottom: 0;/* Aqui é onde começa a listra do lado de cima que é na posição zero, se fosse "top", ele iniciaria do lado de cima */
+    bottom: 0;
+    /* Aqui é onde começa a listra do lado de cima que é na posição zero, se fosse "top", ele iniciaria do lado de cima */
 
-    left: 0; /* Aqui é onde começa a listra do lado esquerdo que é na posição zero, se fosse "right", ele iniciaria do lado direito */
+    left: 0;
+    /* Aqui é onde começa a listra do lado esquerdo que é na posição zero, se fosse "right", ele iniciaria do lado direito */
 
-    width: 0; /* Aqui é onde começa a listra, no caso na posição zero */
+    width: 0;
+    /* Aqui é onde começa a listra, no caso na posição zero */
 
-    height: 2px; /* Altura da listra */
+    height: 2px;
+    /* Altura da listra */
 
-    background-color: #000; /* Cor da listra */
-    
-    transition: width 0.3s ease; /* Animação suave */
+    background-color: #000;
+    /* Cor da listra */
+
+    transition: width 0.3s ease;
+    /* Animação suave */
 }
 
 .ulPages ul li:hover::after {
-    width: 100%; /* Listra se expande para a largura total */
+    width: 100%;
+    /* Listra se expande para a largura total */
 }
 
 .iconBG img {
     width: 3rem;
 }
 
-main{
+main {
     max-width: 1000px;
     width: 80%;
     min-width: 350px;
@@ -82,32 +89,102 @@ main{
     border-radius: 1rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.37);
     margin-bottom: 2rem;
-    
+
 }
 
-.sobreMimP{
+.sobreMimP {
     width: 100%;
     text-align: center;
 }
 
-a{
+a {
     text-decoration: none;
     color: #000;
 }
+
+.formacaoAcad {
+    display: flex;
+    justify-content: baseline;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.ulAcad{
+    width: 65%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.habilidades {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+.habilidade2{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.divHab{
+    background-color: #1398cc5d;
+    border-radius: .75rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+}
+.ulAcad ul{
+    font-size: 18px;
+}
+
+.Projetos{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.ulProj{
+    display: flex;
+    justify-content: center;
+    width: 35%;
+}
+
+.interesses{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #0000003f;
+}
+
 .dark-mode {
     background-color: #1E1E1E;
     color: #fff;
 }
 
-.dark-mode header{
+.dark-mode header {
     background-color: #333;
 }
 
-.dark-mode main{
+.dark-mode main {
     background-color: #333;
 }
 
-.dark-mode a{
+.dark-mode a {
     color: #f5f7fa;
 }
 
+.dark-mode hr{
+    border: 0;
+    border-top: 1px solid #ffffff6e;
+}
