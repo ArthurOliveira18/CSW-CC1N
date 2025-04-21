@@ -1,0 +1,146 @@
+/* Estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #cad3db;
+    width: 100%;
+}
+
+.foto-perfil img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+
+.iconBG img {
+    width: 24px;
+    cursor: pointer;
+}
+
+.conteudo {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.nome {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.cargo {
+    font-size: 1.25rem;
+    color: #3498db;
+    margin-bottom: 1.5rem;
+}
+
+.contato p {
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.sobre {
+    margin: 2rem 0;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+}
+
+.formacao {
+    margin-bottom: 2rem;
+}
+
+.formacao h3, .habilidades h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.item {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.item h4 {
+    color: #3498db;
+    margin-bottom: 0.25rem;
+}
+
+.lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.lista span {
+    background: #e1f0ff;
+    color: #0066cc;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* Modo escuro - mantido como no original */
+.dark-mode {
+    background-color: #1E1E1E;
+    color: #fff;
+}
+
+.dark-mode header {
+    background-color: #333;
+}
+
+.dark-mode .conteudo {
+    background-color: #333;
+}
+
+.dark-mode a {
+    color: #f5f7fa;
+}
+
+.dark-mode hr {
+    border: 0;
+    border-top: 1px solid #ffffff6e;
+}
+
+.dark-mode .sobre,
+.dark-mode .item {
+    background-color: #444;
+    color: #fff;
+}
+
+.dark-mode .lista span {
+    background-color: #2d3a4a;
+    color: #4da6ff;
+}
